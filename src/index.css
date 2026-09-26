@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 30 33% 98%;
+    --foreground: 250 25% 20%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 250 25% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 250 25% 20%;
+
+    --primary: 260 60% 65%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 330 50% 92%;
+    --secondary-foreground: 330 40% 40%;
+
+    --muted: 250 20% 95%;
+    --muted-foreground: 250 10% 50%;
+
+    --accent: 200 60% 92%;
+    --accent-foreground: 200 50% 30%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 250 20% 90%;
+    --input: 250 20% 90%;
+    --ring: 260 60% 65%;
+
+    --radius: 0.75rem;
+
+    --peach: 20 70% 92%;
+    --peach-foreground: 20 50% 35%;
+    --lavender: 260 50% 93%;
+    --lavender-foreground: 260 40% 35%;
+    --sky: 200 60% 92%;
+    --sky-foreground: 200 50% 30%;
+    --rose: 330 50% 92%;
+    --rose-foreground: 330 40% 40%;
+    --cream: 40 40% 96%;
+    --cmu: 352 62% 56%;
+
+    --gradient-hero: linear-gradient(135deg, hsl(260 50% 93% / 0.25) 0%, hsl(330 50% 94% / 0.25) 35%, hsl(20 70% 94% / 0.25) 65%, hsl(200 60% 94% / 0.25) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(260 60% 65%), hsl(300 50% 65%));
+    --gradient-warm: linear-gradient(135deg, hsl(330 50% 92%), hsl(20 70% 92%));
+    --gradient-cool: linear-gradient(135deg, hsl(200 60% 92%), hsl(260 50% 93%));
+
+    --shadow-soft: 0 4px 20px -4px hsl(260 40% 70% / 0.15);
+    --shadow-glow: 0 0 30px -5px hsl(260 60% 65% / 0.2);
+    --shadow-card: 0 2px 12px -2px hsl(260 40% 70% / 0.1);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+    --tint-1: 260 50% 96%;
+    --tint-2: 330 50% 97%;
+    --tint-3: 200 60% 96%;
+    --tint-4: 20 70% 96%;
+    --blob-1: 265 80% 82%;
+    --blob-2: 330 80% 85%;
+    --blob-3: 200 80% 85%;
+    --blob-4: 25 85% 86%;
+    --blob-opacity: 0.45;
+    --node: 250 45% 67%;
+  }
+
+  .dark {
+    --background: 262 38% 9%;
+    --foreground: 280 30% 94%;
+    --card: 263 32% 14%;
+    --card-foreground: 280 30% 94%;
+    --popover: 263 32% 14%;
+    --popover-foreground: 280 30% 94%;
+    --primary: 275 75% 76%;
+    --primary-foreground: 262 40% 12%;
+    --secondary: 325 35% 24%;
+    --secondary-foreground: 330 80% 88%;
+    --muted: 263 25% 18%;
+    --muted-foreground: 270 18% 74%;
+    --accent: 220 35% 22%;
+    --accent-foreground: 200 80% 88%;
+    --border: 263 22% 24%;
+    --input: 263 22% 24%;
+    --ring: 275 75% 76%;
+    --peach: 15 35% 24%;
+    --peach-foreground: 20 85% 86%;
+    --lavender: 265 32% 24%;
+    --lavender-foreground: 265 85% 88%;
+    --sky: 210 35% 22%;
+    --sky-foreground: 200 85% 86%;
+    --rose: 325 32% 24%;
+    --rose-foreground: 330 85% 88%;
+    --cream: 262 30% 12%;
+    --cmu: 352 68% 72%;
+    --gradient-hero: linear-gradient(135deg, hsl(262 40% 12% / 0.6) 0%, hsl(300 35% 14% / 0.6) 40%, hsl(250 40% 13% / 0.6) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(275 80% 80%), hsl(325 80% 80%));
+    --shadow-soft: 0 4px 20px -4px hsl(270 60% 5% / 0.5);
+    --shadow-glow: 0 0 30px -5px hsl(290 80% 75% / 0.3);
+    --shadow-card: 0 2px 14px -2px hsl(270 60% 4% / 0.5);
+    --tint-1: 265 40% 16%;
+    --tint-2: 320 35% 15%;
+    --tint-3: 220 40% 15%;
+    --tint-4: 20 30% 14%;
+    --blob-1: 275 70% 45%;
+    --blob-2: 325 65% 45%;
+    --blob-3: 220 65% 45%;
+    --blob-4: 20 60% 45%;
+    --blob-opacity: 0.22;
+    --node: 280 80% 82%;
+  }
+}
+
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', Georgia, serif;
+    letter-spacing: -0.01em;
+  }
+}
+
+@layer utilities {
+  .font-heading {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+
+  .font-display {
+    font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+  }
+
+  .font-body {
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+
+  .gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .glass-card {
+    @apply bg-card/70 backdrop-blur-md border border-border/50;
+    box-shadow: var(--shadow-card);
+  }
+
+  .glow-hover {
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+
+  .glow-hover:hover {
+    box-shadow: var(--shadow-glow);
+    transform: translateY(-2px);
+  }
+
+  .float-animation {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .float-animation-delayed {
+    animation: float 6s ease-in-out 2s infinite;
+  }
+
+  .float-animation-slow {
+    animation: float 8s ease-in-out 1s infinite;
+  }
+
+  .section-gradient-1 {
+    background: linear-gradient(180deg, transparent 0%, hsl(var(--tint-1) / 0.55) 50%, transparent 100%);
+  }
+
+  .section-gradient-2 {
+    background: linear-gradient(180deg, transparent 0%, hsl(var(--tint-2) / 0.55) 50%, transparent 100%);
+  }
+
+  .section-gradient-3 {
+    background: linear-gradient(180deg, transparent 0%, hsl(var(--tint-3) / 0.55) 50%, transparent 100%);
+  }
+
+  .section-gradient-4 {
+    background: linear-gradient(180deg, transparent 0%, hsl(var(--tint-4) / 0.55) 50%, transparent 100%);
+  }
+
+  .stagger-fade-up {
+    animation: stagger-fade-up 0.8s ease-out forwards;
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  33% { transform: translateY(-12px) rotate(1deg); }
+  66% { transform: translateY(6px) rotate(-1deg); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.8; }
+}
+
+@keyframes stagger-fade-up {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes gentle-rotate {
+  0%, 100% { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(3deg) scale(1.02); }
+}
+
+@keyframes sparkle {
+  0%, 100% { opacity: 0; transform: scale(0); }
+  50% { opacity: 1; transform: scale(1); }
+}
+
+/* Fluid / ripple backdrop */
+.fluid-blob {
+  position: absolute;
+  width: 55vmax;
+  height: 55vmax;
+  border-radius: 45% 55% 60% 40% / 50% 45% 55% 50%;
+  filter: blur(70px);
+  opacity: var(--blob-opacity);
+  will-change: transform;
+}
+.fluid-blob-1 { background: hsl(var(--blob-1)); top: -15vmax; left: -10vmax; animation: fluid-drift-1 28s ease-in-out infinite alternate; }
+.fluid-blob-2 { background: hsl(var(--blob-2)); top: 10vmax; right: -18vmax; animation: fluid-drift-2 34s ease-in-out infinite alternate; }
+.fluid-blob-3 { background: hsl(var(--blob-3)); bottom: -20vmax; left: 15vmax; animation: fluid-drift-3 38s ease-in-out infinite alternate; }
+.fluid-blob-4 { background: hsl(var(--blob-4)); top: 35vmax; left: -15vmax; width: 40vmax; height: 40vmax; animation: fluid-drift-2 30s ease-in-out infinite alternate-reverse; }
+.fluid-ripple {
+  position: absolute; inset: -50%;
+  background: repeating-radial-gradient(circle at 50% 40%, hsl(var(--primary) / 0.05) 0 2px, transparent 2px 60px);
+  animation: fluid-ripple 18s linear infinite;
+  opacity: 0.6;
+}
+@keyframes fluid-drift-1 { 0% { transform: translate(0,0) rotate(0deg) scale(1); } 100% { transform: translate(18vw, 12vh) rotate(60deg) scale(1.15); } }
+@keyframes fluid-drift-2 { 0% { transform: translate(0,0) rotate(0deg) scale(1.05); } 100% { transform: translate(-16vw, 18vh) rotate(-50deg) scale(0.9); } }
+@keyframes fluid-drift-3 { 0% { transform: translate(0,0) rotate(0deg); } 100% { transform: translate(10vw, -20vh) rotate(80deg) scale(1.2); } }
+@keyframes fluid-ripple { 0% { transform: scale(1); } 100% { transform: scale(1.12); } }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem("theme");
+          var dark = t ? t === "dark" : window.matchMedia("(prefers-color-scheme: dark)").matches;
+          if (dark) document.documentElement.classList.add("dark");
+        } catch (e) {}
+      })();
+    </script>
+    <title>Prarthana Rout | Software & AI/ML Engineer</title>
+    <meta name="description" content="Prarthana Rout — CMU MS in AI Engineering (Information Security), building reliable AI systems across LLMs, agents, ML infrastructure and secure AI. Class of 2027.">
+
+    <meta name="author" content="Prarthana Rout" />
+
+    
+    
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/72431998-b822-4d17-8aca-1acb615a0cbc">
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@Lovable" />
+    <meta name="twitter:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/72431998-b822-4d17-8aca-1acb615a0cbc">
+    <meta property="og:title" content="Prarthana Rout | AI/ML Engineer">
+  <meta name="twitter:title" content="Prarthana Rout | AI/ML Engineer">
+  <meta property="og:description" content="Portfolio of Prarthana Rout — AI/ML Engineer, CMU graduate student building reliable, explainable, and trustworthy AI systems.">
+  <meta name="twitter:description" content="Portfolio of Prarthana Rout — AI/ML Engineer, CMU graduate student building reliable, explainable, and trustworthy AI systems.">
+</head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
